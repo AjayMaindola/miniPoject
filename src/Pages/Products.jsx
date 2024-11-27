@@ -1,13 +1,11 @@
 import React from 'react'
-import Header from '../comonComponent/Header'
-import Footer from '../comonComponent/Footer'
 import { allProduct } from '../Data/ProductData'
 import { Link } from 'react-router-dom'
 
 export default function Products() {
   return (
     <div>
-        <Header/>
+      
         <div className="mt-[100px] ">
         <h1 className='text-center text-red-600 text-[40px]'> Our Product</h1>
         <div className='grid grid-cols-3 gap-4 pb-[10px]'>
@@ -32,7 +30,7 @@ export default function Products() {
 
 
         
-      <Footer/>
+   
     </div>
     </div>
   )

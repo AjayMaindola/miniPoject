@@ -1,6 +1,4 @@
 import React from 'react'
-import Header from '../comonComponent/Header'
-import Footer from '../comonComponent/Footer'
 import { useParams } from 'react-router-dom'
 import { allProduct } from '../Data/ProductData'
 
@@ -9,7 +7,7 @@ export default function ProductDetails() {
     let singleProductDetails=allProduct.filter((items)=>items.id==Pid)[0]
   return (
     <div>
-      <Header/>
+    
       <div className='max-w-[800px] mx-auto p-[15px] grid grid-cols-2 gap-6 mt-[100px] border shadow-lg hover:shadow-xl'>
         <div>
             <img src={singleProductDetails.thumbnail} alt="" />
@@ -24,7 +22,7 @@ export default function ProductDetails() {
             
         </div>
       </div>
-      <Footer/>
+     
     </div>
   )
 }

@@ -9,37 +9,48 @@ import Services from './Pages/Services'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Products from './Pages/Products'
 import ProductDetails from './Pages/ProductDetails'
+import LayoutFrame from './LayoutFrame'
 
 let allRoutes=createBrowserRouter(
   [
+
     {
       path:"/",
-      element:<Home/>
+      element:<LayoutFrame />,
+      children:[
+        {
+          path:"/",
+          element:<Home/>
+        },
+        {
+          path:'/about-us',
+          element:<About/>
+        },
+        {
+          path:'/Product',
+          element:<Products/>
+        },
+        {
+          path:'/Product-details/:Pid',
+          element:<ProductDetails/>
+        },
+        {
+          path:'/blog',
+          element:<Blog/>
+        },
+        {
+          path:'/services',
+          element:<Services/>
+        },
+        {
+          path:'/contact-us',
+          element:<Contact/>
+        }
+      ]
     },
-    {
-      path:'/about-us',
-      element:<About/>
-    },
-    {
-      path:'/Product',
-      element:<Products/>
-    },
-    {
-      path:'/Product-details/:Pid',
-      element:<ProductDetails/>
-    },
-    {
-      path:'/blog',
-      element:<Blog/>
-    },
-    {
-      path:'/services',
-      element:<Services/>
-    },
-    {
-      path:'/contact-us',
-      element:<Contact/>
-    }
+
+
+  
   ]
 )
 createRoot(document.getElementById('root')).render(

@@ -2,35 +2,45 @@ import React from "react";
 import { BsCartDashFill } from "react-icons/bs";
 import { FaUserTie } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import logo from "../assets/images/logo1.png"
+import logo from "../assets/images/logo.svg";
 
 export default function Header() {
   return (
     <div>
       <header className="flex justify-between px-40 py-6 bg-white fixed top-0 min-w-full shadow-xl">
-        {/* <img className="bg-green-700" src="../public/vite.svg" alt="" /> */}
         <img className="w-[50px]" src={logo} alt="" />
-        {/* <img src="./assets/images/logo1.png" alt="" />
-        <h1>Google</h1> */}
         <ul className="flex  ">
-          <li className="px-6 py-1 hover:bg-green-400 hover:text-white"><Link to={"/"}>Home </Link> </li>
-          <li className="px-6 py-1 hover:bg-green-400 hover:text-white"><Link to={'/about-us'}>About</Link> </li>
-          <li className="px-6 py-1 hover:bg-green-400 hover:text-white"><Link  to={'/product'}>Product</Link> </li>
-          <li className="px-6 py-1 hover:bg-green-400 hover:text-white"><Link  to={'/blog'}>Blog</Link> </li>
-          <li className="px-6 py-1 hover:bg-green-400 hover:text-white"><Link to={'/services'}>Services</Link> </li>
-          <li className="px-6 py-1 hover:bg-green-400 hover:text-white"><Link  to={'/contact-us'}>Contact Us</Link> </li>
+          <li className="px-6 py-1 hover:bg-green-400 hover:text-white">
+            <Link to={"/"}>Home </Link>{" "}
+          </li>
+          <li className="px-6 py-1 hover:bg-green-400 hover:text-white">
+            <Link to={"/about-us"}>About</Link>{" "}
+          </li>
+          <li className="px-6 py-1 hover:bg-green-400 hover:text-white">
+            <Link to={"/product"}>Product</Link>{" "}
+          </li>
+          <li className="px-6 py-1 hover:bg-green-400 hover:text-white">
+            <Link to={"/blog"}>Blog</Link>{" "}
+          </li>
+          <li className="px-6 py-1 hover:bg-green-400 hover:text-white">
+            <Link to={"/services"}>Services</Link>{" "}
+          </li>
+          <li className="px-6 py-1 hover:bg-green-400 hover:text-white">
+            <Link to={"/contact-us"}>Contact Us</Link>{" "}
+          </li>
         </ul>
         <div className="flex  items-center gap-6">
-            <div className="w-[32px] h-[32px] bg-green-300 flex items-center justify-center rounded-full hover:bg-red-500 cursor-pointer hover:text-white"><FaUserTie className="" /></div>
-            <div className="w-[32px] h-[32px] bg-green-300 flex items-center justify-center rounded-full hover:bg-red-500 cursor-pointer hover:text-white"> <BsCartDashFill/></div>
-       
+          <div className="w-[32px] h-[32px] bg-green-300 flex items-center justify-center rounded-full hover:bg-red-500 cursor-pointer hover:text-white">
+            <FaUserTie className="" />
+          </div>
+          <div className="w-[32px] h-[32px] bg-green-300 flex items-center justify-center rounded-full hover:bg-red-500 cursor-pointer hover:text-white">
+            {" "}
+            <BsCartDashFill />
+          </div>
         </div>
-      
       </header>
 
-      
-
-{/* <nav class="bg-white border-gray-200 dark:bg-gray-900">
+      {/* <nav class="bg-white border-gray-200 dark:bg-gray-900">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
         <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
@@ -63,7 +73,6 @@ export default function Header() {
     </div>
   </div>
 </nav> */}
-
     </div>
   );
 }
